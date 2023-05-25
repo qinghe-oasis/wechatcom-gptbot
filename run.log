@@ -1,0 +1,501 @@
+[INFO][2023-05-19 14:22:28][config.py:195] - [INIT] load config: {'open_ai_api_key': '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', 'model': 'gpt-3.5-turbo', 'proxy': '', 'single_chat_prefix': [''], 'single_chat_reply_prefix': '[] ', 'group_chat_prefix': [''], 'group_name_white_list': ['ChatGPT测试群', 'ChatGPT测试群2'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。'}
+[INFO][2023-05-19 14:22:28][config.py:145] - [Config] User datas file not found, ignore.
+[INFO][2023-05-19 14:22:29][plugin_manager.py:50] - Loading plugins config...
+[INFO][2023-05-19 14:22:29][plugin_manager.py:66] - Scaning plugins ...
+[INFO][2023-05-19 14:22:29][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2023-05-19 14:22:29][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2023-05-19 14:22:29][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2023-05-19 14:22:29][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2023-05-19 14:22:29][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2023-05-19 14:22:29][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2023-05-19 14:22:29][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2023-05-19 14:22:29][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2023-05-19 14:22:33][plugin_manager.py:41] - Plugin tool_v0.4 registered, path=./plugins/tool
+[INFO][2023-05-19 14:22:33][plugin_manager.py:101] - Plugin GODCMD not found in pconfig, adding to pconfig...
+[INFO][2023-05-19 14:22:33][plugin_manager.py:101] - Plugin KEYWORD not found in pconfig, adding to pconfig...
+[INFO][2023-05-19 14:22:33][plugin_manager.py:101] - Plugin BANWORDS not found in pconfig, adding to pconfig...
+[INFO][2023-05-19 14:22:33][plugin_manager.py:101] - Plugin TOOL not found in pconfig, adding to pconfig...
+[INFO][2023-05-19 14:22:33][plugin_manager.py:101] - Plugin ROLE not found in pconfig, adding to pconfig...
+[INFO][2023-05-19 14:22:33][plugin_manager.py:101] - Plugin DUNGEON not found in pconfig, adding to pconfig...
+[INFO][2023-05-19 14:22:33][plugin_manager.py:101] - Plugin BDUNIT not found in pconfig, adding to pconfig...
+[INFO][2023-05-19 14:22:33][plugin_manager.py:101] - Plugin HELLO not found in pconfig, adding to pconfig...
+[INFO][2023-05-19 14:22:33][plugin_manager.py:101] - Plugin FINISH not found in pconfig, adding to pconfig...
+[INFO][2023-05-19 14:22:33][godcmd.py:193] - [Godcmd] 因未设置口令，本次的临时口令为3794。
+[INFO][2023-05-19 14:22:33][godcmd.py:208] - [Godcmd] inited
+[INFO][2023-05-19 14:22:33][keyword.py:40] - [keyword] {}
+[INFO][2023-05-19 14:22:33][keyword.py:42] - [keyword] inited.
+[WARNING][2023-05-19 14:22:33][banwords.py:53] - [Banwords] init failed, ignore or see https://github.com/zhayujie/chatgpt-on-wechat/tree/master/plugins/banwords .
+[ERROR][2023-05-19 14:22:33][plugin_manager.py:126] - Failed to init BANWORDS, diabled. [Errno 2] No such file or directory: '/Users/luo/code/python/chatgpt-on-wechat/plugins/banwords/banwords.txt'
+Traceback (most recent call last):
+  File "/Users/luo/code/python/chatgpt-on-wechat/plugins/plugin_manager.py", line 124, in activate_plugins
+    instance = plugincls()
+  File "/Users/luo/code/python/chatgpt-on-wechat/plugins/banwords/banwords.py", line 54, in __init__
+    raise e
+  File "/Users/luo/code/python/chatgpt-on-wechat/plugins/banwords/banwords.py", line 40, in __init__
+    with open(banwords_path, "r", encoding="utf-8") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/luo/code/python/chatgpt-on-wechat/plugins/banwords/banwords.txt'
+[INFO][2023-05-19 14:22:39][tool.py:32] - [tool] inited
+[INFO][2023-05-19 14:22:39][role.py:69] - [Role] inited
+[INFO][2023-05-19 14:22:39][dungeon.py:56] - [Dungeon] inited
+[WARNING][2023-05-19 14:22:39][bdunit.py:47] - [BDunit] init failed, ignore 
+[ERROR][2023-05-19 14:22:39][plugin_manager.py:126] - Failed to init BDUNIT, diabled. config.json not found
+Traceback (most recent call last):
+  File "/Users/luo/code/python/chatgpt-on-wechat/plugins/plugin_manager.py", line 124, in activate_plugins
+    instance = plugincls()
+  File "/Users/luo/code/python/chatgpt-on-wechat/plugins/bdunit/bdunit.py", line 48, in __init__
+    raise e
+  File "/Users/luo/code/python/chatgpt-on-wechat/plugins/bdunit/bdunit.py", line 36, in __init__
+    raise Exception("config.json not found")
+Exception: config.json not found
+[INFO][2023-05-19 14:22:39][hello.py:23] - [Hello] inited
+[INFO][2023-05-19 14:22:39][finish.py:23] - [Finish] inited
+[ERROR][2023-05-19 14:23:16][app.py:52] - App startup failed!
+[ERROR][2023-05-19 14:23:16][app.py:53] - 'wxsid'
+Traceback (most recent call last):
+  File "/Users/luo/code/python/chatgpt-on-wechat/app.py", line 50, in run
+    channel.startup()
+  File "/Users/luo/code/python/chatgpt-on-wechat/channel/wechat/wechat_channel.py", line 116, in startup
+    itchat.auto_login(
+  File "/Users/luo/code/python/chatgpt-on-wechat/lib/itchat/components/register.py", line 38, in auto_login
+    self.login(enableCmdQR=enableCmdQR, picDir=picDir, qrCallback=qrCallback,
+  File "/Users/luo/code/python/chatgpt-on-wechat/lib/itchat/components/login.py", line 61, in login
+    status = self.check_login()
+  File "/Users/luo/code/python/chatgpt-on-wechat/lib/itchat/components/login.py", line 154, in check_login
+    if process_login_info(self, r.text):
+  File "/Users/luo/code/python/chatgpt-on-wechat/lib/itchat/components/login.py", line 206, in process_login_info
+    core.loginInfo['wxsid'] = core.loginInfo['BaseRequest']['Sid'] = cookies["wxsid"]
+KeyError: 'wxsid'
+[INFO][2023-05-19 14:35:08][config.py:195] - [INIT] load config: {'open_ai_api_key': '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', 'model': 'gpt-3.5-turbo', 'proxy': '192.168.3.219', 'single_chat_prefix': [''], 'single_chat_reply_prefix': '[] ', 'group_chat_prefix': [''], 'group_name_white_list': ['ChatGPT测试群', 'ChatGPT测试群2'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。'}
+[INFO][2023-05-19 14:35:08][config.py:145] - [Config] User datas file not found, ignore.
+[INFO][2023-05-19 14:35:08][plugin_manager.py:50] - Loading plugins config...
+[INFO][2023-05-19 14:35:08][plugin_manager.py:66] - Scaning plugins ...
+[INFO][2023-05-19 14:35:08][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2023-05-19 14:35:08][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2023-05-19 14:35:08][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2023-05-19 14:35:08][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2023-05-19 14:35:08][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2023-05-19 14:35:08][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2023-05-19 14:35:08][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2023-05-19 14:35:08][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2023-05-19 14:35:09][plugin_manager.py:41] - Plugin tool_v0.4 registered, path=./plugins/tool
+[INFO][2023-05-19 14:35:09][godcmd.py:193] - [Godcmd] 因未设置口令，本次的临时口令为1304。
+[INFO][2023-05-19 14:35:09][godcmd.py:208] - [Godcmd] inited
+[INFO][2023-05-19 14:35:09][keyword.py:40] - [keyword] {}
+[INFO][2023-05-19 14:35:09][keyword.py:42] - [keyword] inited.
+[INFO][2023-05-19 14:35:09][tool.py:32] - [tool] inited
+[INFO][2023-05-19 14:35:09][role.py:69] - [Role] inited
+[INFO][2023-05-19 14:35:09][dungeon.py:56] - [Dungeon] inited
+[INFO][2023-05-19 14:35:09][hello.py:23] - [Hello] inited
+[INFO][2023-05-19 14:35:09][finish.py:23] - [Finish] inited
+[ERROR][2023-05-19 14:35:44][app.py:52] - App startup failed!
+[ERROR][2023-05-19 14:35:44][app.py:53] - 'wxsid'
+Traceback (most recent call last):
+  File "/Users/luo/code/python/chatgpt-on-wechat/app.py", line 50, in run
+    channel.startup()
+  File "/Users/luo/code/python/chatgpt-on-wechat/channel/wechat/wechat_channel.py", line 116, in startup
+    itchat.auto_login(
+  File "/Users/luo/code/python/chatgpt-on-wechat/lib/itchat/components/register.py", line 38, in auto_login
+    self.login(enableCmdQR=enableCmdQR, picDir=picDir, qrCallback=qrCallback,
+  File "/Users/luo/code/python/chatgpt-on-wechat/lib/itchat/components/login.py", line 61, in login
+    status = self.check_login()
+  File "/Users/luo/code/python/chatgpt-on-wechat/lib/itchat/components/login.py", line 154, in check_login
+    if process_login_info(self, r.text):
+  File "/Users/luo/code/python/chatgpt-on-wechat/lib/itchat/components/login.py", line 206, in process_login_info
+    core.loginInfo['wxsid'] = core.loginInfo['BaseRequest']['Sid'] = cookies["wxsid"]
+KeyError: 'wxsid'
+[INFO][2023-05-19 14:52:25][config.py:195] - [INIT] load config: {'open_ai_api_key': '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', 'model': 'gpt-3.5-turbo', 'proxy': '192.168.3.219', 'single_chat_prefix': [''], 'single_chat_reply_prefix': '[] ', 'group_chat_prefix': [''], 'group_name_white_list': ['ChatGPT测试群', 'ChatGPT测试群2'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。'}
+[INFO][2023-05-19 14:52:25][config.py:145] - [Config] User datas file not found, ignore.
+[INFO][2023-05-19 14:52:25][plugin_manager.py:50] - Loading plugins config...
+[INFO][2023-05-19 14:52:25][plugin_manager.py:66] - Scaning plugins ...
+[INFO][2023-05-19 14:52:25][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2023-05-19 14:52:25][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2023-05-19 14:52:25][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2023-05-19 14:52:25][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2023-05-19 14:52:25][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2023-05-19 14:52:25][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2023-05-19 14:52:25][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2023-05-19 14:52:25][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2023-05-19 14:52:26][plugin_manager.py:41] - Plugin tool_v0.4 registered, path=./plugins/tool
+[INFO][2023-05-19 14:52:26][godcmd.py:193] - [Godcmd] 因未设置口令，本次的临时口令为7254。
+[INFO][2023-05-19 14:52:26][godcmd.py:208] - [Godcmd] inited
+[INFO][2023-05-19 14:52:26][keyword.py:40] - [keyword] {}
+[INFO][2023-05-19 14:52:26][keyword.py:42] - [keyword] inited.
+[INFO][2023-05-19 14:52:26][tool.py:32] - [tool] inited
+[INFO][2023-05-19 14:52:26][role.py:69] - [Role] inited
+[INFO][2023-05-19 14:52:26][dungeon.py:56] - [Dungeon] inited
+[INFO][2023-05-19 14:52:26][hello.py:23] - [Hello] inited
+[INFO][2023-05-19 14:52:26][finish.py:23] - [Finish] inited
+[ERROR][2023-05-19 14:52:44][app.py:52] - App startup failed!
+[ERROR][2023-05-19 14:52:44][app.py:53] - 'wxsid'
+Traceback (most recent call last):
+  File "/Users/luo/code/python/chatgpt-on-wechat/app.py", line 50, in run
+    channel.startup()
+  File "/Users/luo/code/python/chatgpt-on-wechat/channel/wechat/wechat_channel.py", line 116, in startup
+    itchat.auto_login(
+  File "/Users/luo/code/python/chatgpt-on-wechat/lib/itchat/components/register.py", line 38, in auto_login
+    self.login(enableCmdQR=enableCmdQR, picDir=picDir, qrCallback=qrCallback,
+  File "/Users/luo/code/python/chatgpt-on-wechat/lib/itchat/components/login.py", line 61, in login
+    status = self.check_login()
+  File "/Users/luo/code/python/chatgpt-on-wechat/lib/itchat/components/login.py", line 154, in check_login
+    if process_login_info(self, r.text):
+  File "/Users/luo/code/python/chatgpt-on-wechat/lib/itchat/components/login.py", line 206, in process_login_info
+    core.loginInfo['wxsid'] = core.loginInfo['BaseRequest']['Sid'] = cookies["wxsid"]
+KeyError: 'wxsid'
+[INFO][2023-05-19 14:54:28][config.py:195] - [INIT] load config: {'open_ai_api_key': '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', 'model': 'gpt-3.5-turbo', 'proxy': '192.168.3.219', 'single_chat_prefix': ['bot'], 'single_chat_reply_prefix': '[] ', 'group_chat_prefix': [''], 'group_name_white_list': ['ChatGPT测试群', 'ChatGPT测试群2'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。'}
+[INFO][2023-05-19 14:54:28][config.py:145] - [Config] User datas file not found, ignore.
+[INFO][2023-05-19 14:54:28][plugin_manager.py:50] - Loading plugins config...
+[INFO][2023-05-19 14:54:28][plugin_manager.py:66] - Scaning plugins ...
+[INFO][2023-05-19 14:54:28][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2023-05-19 14:54:28][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2023-05-19 14:54:28][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2023-05-19 14:54:28][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2023-05-19 14:54:28][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2023-05-19 14:54:28][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2023-05-19 14:54:28][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2023-05-19 14:54:28][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2023-05-19 14:54:29][plugin_manager.py:41] - Plugin tool_v0.4 registered, path=./plugins/tool
+[INFO][2023-05-19 14:54:29][godcmd.py:193] - [Godcmd] 因未设置口令，本次的临时口令为6753。
+[INFO][2023-05-19 14:54:29][godcmd.py:208] - [Godcmd] inited
+[INFO][2023-05-19 14:54:29][keyword.py:40] - [keyword] {}
+[INFO][2023-05-19 14:54:29][keyword.py:42] - [keyword] inited.
+[INFO][2023-05-19 14:54:29][tool.py:32] - [tool] inited
+[INFO][2023-05-19 14:54:29][role.py:69] - [Role] inited
+[INFO][2023-05-19 14:54:29][dungeon.py:56] - [Dungeon] inited
+[INFO][2023-05-19 14:54:29][hello.py:23] - [Hello] inited
+[INFO][2023-05-19 14:54:29][finish.py:23] - [Finish] inited
+[INFO][2023-05-19 14:54:47][wechat_channel.py:124] - Wechat login success, user_id: @1552539b43a78a7208824ebac36fb871fb9e83ec55f7602e550b41bbbc491626, nickname: 清和
+[INFO][2023-05-19 14:56:16][config.py:195] - [INIT] load config: {'open_ai_api_key': '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', 'model': 'gpt-3.5-turbo', 'proxy': '192.168.3.219', 'single_chat_prefix': ['bot'], 'single_chat_reply_prefix': '[] ', 'group_chat_prefix': [''], 'group_name_white_list': ['ChatGPT测试群', 'ChatGPT测试群2'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。'}
+[INFO][2023-05-19 14:56:16][config.py:145] - [Config] User datas file not found, ignore.
+[INFO][2023-05-19 14:56:16][plugin_manager.py:50] - Loading plugins config...
+[INFO][2023-05-19 14:56:16][plugin_manager.py:66] - Scaning plugins ...
+[INFO][2023-05-19 14:56:16][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2023-05-19 14:56:16][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2023-05-19 14:56:16][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2023-05-19 14:56:16][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2023-05-19 14:56:16][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2023-05-19 14:56:16][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2023-05-19 14:56:16][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2023-05-19 14:56:16][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2023-05-19 14:56:17][plugin_manager.py:41] - Plugin tool_v0.4 registered, path=./plugins/tool
+[INFO][2023-05-19 14:56:17][godcmd.py:193] - [Godcmd] 因未设置口令，本次的临时口令为6702。
+[INFO][2023-05-19 14:56:17][godcmd.py:208] - [Godcmd] inited
+[INFO][2023-05-19 14:56:17][keyword.py:40] - [keyword] {}
+[INFO][2023-05-19 14:56:17][keyword.py:42] - [keyword] inited.
+[INFO][2023-05-19 14:56:17][tool.py:32] - [tool] inited
+[INFO][2023-05-19 14:56:17][role.py:69] - [Role] inited
+[INFO][2023-05-19 14:56:17][dungeon.py:56] - [Dungeon] inited
+[INFO][2023-05-19 14:56:17][hello.py:23] - [Hello] inited
+[INFO][2023-05-19 14:56:17][finish.py:23] - [Finish] inited
+[INFO][2023-05-19 14:57:17][wechat_channel.py:124] - Wechat login success, user_id: @3f114eddb736b4c0e701631fe7071c90d3c451b806c0af336d9b6d9dbe3b18f3, nickname: 清和
+[INFO][2023-05-19 15:09:37][app.py:17] - signal 2 received, exiting...
+[INFO][2023-05-19 15:09:37][config.py:154] - [Config] User datas saved.
+[INFO][2023-05-19 15:10:48][app.py:17] - signal 2 received, exiting...
+[INFO][2023-05-19 15:10:48][config.py:154] - [Config] User datas saved.
+[INFO][2023-05-19 15:12:06][config.py:195] - [INIT] load config: {'open_ai_api_key': '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', 'model': 'gpt-3.5-turbo', 'proxy': '192.168.3.219', 'single_chat_prefix': ['bot'], 'single_chat_reply_prefix': '[] ', 'group_chat_prefix': [''], 'group_name_white_list': ['ChatGPT测试群', 'ChatGPT测试群2'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。'}
+[INFO][2023-05-19 15:12:06][config.py:143] - [Config] User datas loaded.
+[INFO][2023-05-19 15:12:06][plugin_manager.py:50] - Loading plugins config...
+[INFO][2023-05-19 15:12:06][plugin_manager.py:66] - Scaning plugins ...
+[INFO][2023-05-19 15:12:06][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2023-05-19 15:12:06][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2023-05-19 15:12:06][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2023-05-19 15:12:06][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2023-05-19 15:12:06][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2023-05-19 15:12:06][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2023-05-19 15:12:06][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2023-05-19 15:12:06][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2023-05-19 15:12:07][plugin_manager.py:41] - Plugin tool_v0.4 registered, path=./plugins/tool
+[INFO][2023-05-19 15:12:07][godcmd.py:193] - [Godcmd] 因未设置口令，本次的临时口令为0619。
+[INFO][2023-05-19 15:12:07][godcmd.py:208] - [Godcmd] inited
+[INFO][2023-05-19 15:12:07][keyword.py:40] - [keyword] {}
+[INFO][2023-05-19 15:12:07][keyword.py:42] - [keyword] inited.
+[INFO][2023-05-19 15:12:15][tool.py:32] - [tool] inited
+[INFO][2023-05-19 15:12:15][role.py:69] - [Role] inited
+[INFO][2023-05-19 15:12:15][dungeon.py:56] - [Dungeon] inited
+[INFO][2023-05-19 15:12:15][hello.py:23] - [Hello] inited
+[INFO][2023-05-19 15:12:15][finish.py:23] - [Finish] inited
+[INFO][2023-05-19 15:13:14][wechat_channel.py:124] - Wechat login success, user_id: @c0d4f3083af0e01ac7a23a89813d36a704556b59376d0692e7ea66afc079ec1c, nickname: 清和
+[INFO][2023-05-19 15:15:15][config.py:195] - [INIT] load config: {'open_ai_api_key': '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', 'model': 'gpt-3.5-turbo', 'proxy': '192.168.3.219', 'single_chat_prefix': ['bot'], 'single_chat_reply_prefix': '[] ', 'group_chat_prefix': [''], 'group_name_white_list': ['ChatGPT测试群', 'ChatGPT测试群2'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。'}
+[INFO][2023-05-19 15:15:15][config.py:143] - [Config] User datas loaded.
+[INFO][2023-05-19 15:15:15][plugin_manager.py:50] - Loading plugins config...
+[INFO][2023-05-19 15:15:15][plugin_manager.py:66] - Scaning plugins ...
+[INFO][2023-05-19 15:15:15][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2023-05-19 15:15:15][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2023-05-19 15:15:15][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2023-05-19 15:15:15][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2023-05-19 15:15:15][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2023-05-19 15:15:15][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2023-05-19 15:15:15][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2023-05-19 15:15:15][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2023-05-19 15:15:16][plugin_manager.py:41] - Plugin tool_v0.4 registered, path=./plugins/tool
+[INFO][2023-05-19 15:15:16][godcmd.py:193] - [Godcmd] 因未设置口令，本次的临时口令为8534。
+[INFO][2023-05-19 15:15:16][godcmd.py:208] - [Godcmd] inited
+[INFO][2023-05-19 15:15:16][keyword.py:40] - [keyword] {}
+[INFO][2023-05-19 15:15:16][keyword.py:42] - [keyword] inited.
+[INFO][2023-05-19 15:15:19][tool.py:32] - [tool] inited
+[INFO][2023-05-19 15:15:19][role.py:69] - [Role] inited
+[INFO][2023-05-19 15:15:19][dungeon.py:56] - [Dungeon] inited
+[INFO][2023-05-19 15:15:19][hello.py:23] - [Hello] inited
+[INFO][2023-05-19 15:15:19][finish.py:23] - [Finish] inited
+[INFO][2023-05-19 15:15:59][wechat_channel.py:124] - Wechat login success, user_id: @23c10657d3fb6f0bcc1048b950c2dd590a4a892c4c44270f582149d1bdd38849, nickname: 清和
+[INFO][2023-05-19 15:18:17][bridge.py:30] - create bot chatGPT for chat
+[INFO][2023-05-19 15:18:17][chat_gpt_bot.py:49] - [CHATGPT] query=生活
+[INFO][2023-05-19 15:18:47][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 生活是指人类在地球上存在和活动的状态。它不仅包括生理和心理的方面，还包括社会和文化的层面。生活包括所有日常活动和经验，如工作、家庭生活、社交、娱乐、学习、健康、财务和个人成长等方面。
+
+生活的意义和价值在于它是人类存在和发展的一个基础。它提供了一种独特的方式来经历世界和与人们互动。生活中的经验可以帮助人们成长、学习和发现自己的目标和意义。它也提供了一种与他人建立联系和共同体验的机会。
+
+然而，生活也可以是充满挑战和困难的。人们经历痛苦、失望、挫折和悲伤等情绪，也可能遭遇贫困、疾病、失业、孤独和歧视等问题。但是，通过适应、互助和寻求帮助，人们可以克服这些困难，迎接生活中的机遇和挑战，拥抱生命中的美好和意义。), receiver=@f24dca3763831de5fe71f2f734d4c9695967ac805254e647ab5027ccf052f88e
+[INFO][2023-05-19 15:35:17][app.py:17] - signal 2 received, exiting...
+[INFO][2023-05-19 15:35:17][config.py:154] - [Config] User datas saved.
+[INFO][2023-05-19 15:35:28][app.py:17] - signal 2 received, exiting...
+[INFO][2023-05-19 15:35:28][config.py:154] - [Config] User datas saved.
+[INFO][2023-05-19 15:35:51][app.py:17] - signal 2 received, exiting...
+[INFO][2023-05-19 15:35:51][config.py:154] - [Config] User datas saved.
+[INFO][2023-05-19 15:36:06][app.py:17] - signal 2 received, exiting...
+[INFO][2023-05-19 15:36:06][config.py:154] - [Config] User datas saved.
+[INFO][2023-05-19 15:37:21][config.py:195] - [INIT] load config: {'open_ai_api_key': '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', 'model': 'gpt-3.5-turbo', 'proxy': '192.168.3.219', 'single_chat_prefix': ['bot'], 'single_chat_reply_prefix': '[] ', 'group_chat_prefix': [''], 'group_name_white_list': ['ChatGPT测试群', 'ChatGPT测试群2'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。'}
+[INFO][2023-05-19 15:37:21][config.py:143] - [Config] User datas loaded.
+[INFO][2023-05-19 15:37:21][plugin_manager.py:50] - Loading plugins config...
+[INFO][2023-05-19 15:37:21][plugin_manager.py:66] - Scaning plugins ...
+[INFO][2023-05-19 15:37:21][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2023-05-19 15:37:21][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2023-05-19 15:37:21][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2023-05-19 15:37:21][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2023-05-19 15:37:21][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2023-05-19 15:37:21][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2023-05-19 15:37:21][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2023-05-19 15:37:21][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2023-05-19 15:37:21][plugin_manager.py:41] - Plugin tool_v0.4 registered, path=./plugins/tool
+[INFO][2023-05-19 15:37:21][godcmd.py:193] - [Godcmd] 因未设置口令，本次的临时口令为4160。
+[INFO][2023-05-19 15:37:21][godcmd.py:208] - [Godcmd] inited
+[INFO][2023-05-19 15:37:21][keyword.py:40] - [keyword] {}
+[INFO][2023-05-19 15:37:21][keyword.py:42] - [keyword] inited.
+[INFO][2023-05-19 15:37:23][tool.py:32] - [tool] inited
+[INFO][2023-05-19 15:37:23][role.py:69] - [Role] inited
+[INFO][2023-05-19 15:37:23][dungeon.py:56] - [Dungeon] inited
+[INFO][2023-05-19 15:37:23][hello.py:23] - [Hello] inited
+[INFO][2023-05-19 15:37:23][finish.py:23] - [Finish] inited
+[INFO][2023-05-19 15:37:43][wechat_channel.py:124] - Wechat login success, user_id: @9ac7c7e5a2897ab93ee13d60cbba7e4b98bfbac2143e22d690eb0cf8dcff6ae0, nickname: 清和
+[INFO][2023-05-19 15:37:53][bridge.py:30] - create bot chatGPT for chat
+[INFO][2023-05-19 15:37:53][chat_gpt_bot.py:49] - [CHATGPT] query=你会游泳吗
+[INFO][2023-05-19 15:37:59][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 抱歉，作为一个基于计算机的语言模型，我没有身体和运动能力，所以我不能游泳。我只是一台计算机程序，可以回答问题和提供在我的数据库中找到的信息。), receiver=@9ac7c7e5a2897ab93ee13d60cbba7e4b98bfbac2143e22d690eb0cf8dcff6ae0
+[INFO][2023-05-19 15:38:11][chat_gpt_bot.py:49] - [CHATGPT] query=等会有雨吗
+[INFO][2023-05-19 15:38:16][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 抱歉，作为一台计算机程序，我无法实时获取您所在地区的天气信息。建议您可以查看天气预报或者使用手机上的天气应用程序查询当地的天气状况，以了解是否会有雨。), receiver=@f24cb71d453e73d8ef146479570093b47eb8f67a43809e7f646eb23e973da289
+[INFO][2023-05-19 15:39:52][open_ai_image.py:22] - [OPEN_AI] image_query=一张猫的图片
+[INFO][2023-05-19 15:39:57][open_ai_image.py:30] - [OPEN_AI] image_url=https://oaidalleapiprodscus.blob.core.windows.net/private/org-WTqpWz26V0GFQr2InRQB1b8m/user-qVNx3z19MmsHIfxaXZctzqV6/img-XvUcZ0fvXMlhFFbHRUdefTb6.png?st=2023-05-19T06%3A39%3A59Z&se=2023-05-19T08%3A39%3A59Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-05-18T20%3A55%3A28Z&ske=2023-05-19T20%3A55%3A28Z&sks=b&skv=2021-08-06&sig=f/KDVkYRuJRk%2BdyD4k0XrExzQ/B48IArzneell2zM28%3D
+[INFO][2023-05-19 15:40:00][wechat_channel.py:199] - [WX] sendImage url=https://oaidalleapiprodscus.blob.core.windows.net/private/org-WTqpWz26V0GFQr2InRQB1b8m/user-qVNx3z19MmsHIfxaXZctzqV6/img-XvUcZ0fvXMlhFFbHRUdefTb6.png?st=2023-05-19T06%3A39%3A59Z&se=2023-05-19T08%3A39%3A59Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-05-18T20%3A55%3A28Z&ske=2023-05-19T20%3A55%3A28Z&sks=b&skv=2021-08-06&sig=f/KDVkYRuJRk%2BdyD4k0XrExzQ/B48IArzneell2zM28%3D, receiver=@f24cb71d453e73d8ef146479570093b47eb8f67a43809e7f646eb23e973da289
+[INFO][2023-05-19 15:40:26][chat_gpt_bot.py:49] - [CHATGPT] query=塞尔达中的船只怎么驾驶
+[INFO][2023-05-19 15:40:47][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 在《塞尔达传说：荒野之息》中，玩家可以操纵船只来穿越大海。以下是船只驾驶的步骤：
+
+1. 获得船只：您可以在游戏中完成任务或探索岛屿以获得一艘船只。船只可以停泊在游戏中的任何港口或码头。
+
+2. 登上船只：接近船只并按下互动键即可登上。
+
+3. 驾驶：使用左摇杆控制船只的方向，使用右摇杆控制船只的速度。按下A键可以加速，按下B键可以刹车。您还可以使用手柄的运动感应功能来模拟划桨的感觉。
+
+4. 使用望远镜：按下十字键上的望远镜按钮，可以使用望远镜来观察周围的环境和标记有趣的地点。
+
+5. 避免危险：当遇到危险时，例如风暴或海盗，您需要使用船只的技能来躲避或反击。
+
+总之，船只驾驶是一项相对简单的技能，在掌握基本技能后，您可以随意探索海洋并发现游戏中的隐藏宝藏和任务。), receiver=@872990211f853f55587a0a06cca18fb31112c9062df73cf91603a716eb21be89
+[INFO][2023-05-19 15:40:53][chat_gpt_bot.py:49] - [CHATGPT] query=塞尔达中的船只怎么驾驶
+[INFO][2023-05-19 15:41:14][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 在《塞尔达传说：荒野之息》中，玩家可以操纵船只来穿越大海。以下是船只驾驶的步骤：
+
+1. 获得船只：您可以在游戏中完成任务或探索岛屿以获得一艘船只。船只可以停泊在游戏中的任何港口或码头。
+
+2. 登上船只：接近船只并按下互动键即可登上。
+
+3. 驾驶：使用左摇杆控制船只的方向，使用右摇杆控制船只的速度。按下A键可以加速，按下B键可以刹车。您还可以使用手柄的运动感应功能来模拟划桨的感觉。
+
+4. 使用望远镜：按下十字键上的望远镜按钮，可以使用望远镜来观察周围的环境和标记有趣的地点。
+
+5. 避免危险：当遇到危险时，例如风暴或海盗，您需要使用船只的技能来躲避或反击。
+
+总之，船只驾驶是一项相对简单的技能，在掌握基本技能后，您可以随意探索海洋并发现游戏中的隐藏宝藏和任务。), receiver=@872990211f853f55587a0a06cca18fb31112c9062df73cf91603a716eb21be89
+[INFO][2023-05-19 15:41:19][open_ai_image.py:22] - [OPEN_AI] image_query=一张船的图片
+[INFO][2023-05-19 15:41:26][open_ai_image.py:30] - [OPEN_AI] image_url=https://oaidalleapiprodscus.blob.core.windows.net/private/org-WTqpWz26V0GFQr2InRQB1b8m/user-qVNx3z19MmsHIfxaXZctzqV6/img-cqXuYtI2R1EoNo4PeX299JRv.png?st=2023-05-19T06%3A41%3A28Z&se=2023-05-19T08%3A41%3A28Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-05-18T21%3A13%3A34Z&ske=2023-05-19T21%3A13%3A34Z&sks=b&skv=2021-08-06&sig=GWdroGsTk7KtCoGilFYiWFeVYjYScpr5izcNIlejRDw%3D
+[INFO][2023-05-19 15:41:28][wechat_channel.py:199] - [WX] sendImage url=https://oaidalleapiprodscus.blob.core.windows.net/private/org-WTqpWz26V0GFQr2InRQB1b8m/user-qVNx3z19MmsHIfxaXZctzqV6/img-cqXuYtI2R1EoNo4PeX299JRv.png?st=2023-05-19T06%3A41%3A28Z&se=2023-05-19T08%3A41%3A28Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-05-18T21%3A13%3A34Z&ske=2023-05-19T21%3A13%3A34Z&sks=b&skv=2021-08-06&sig=GWdroGsTk7KtCoGilFYiWFeVYjYScpr5izcNIlejRDw%3D, receiver=@872990211f853f55587a0a06cca18fb31112c9062df73cf91603a716eb21be89
+[INFO][2023-05-19 15:41:46][chat_gpt_bot.py:49] - [CHATGPT] query=什么时候吃饭
+[INFO][2023-05-19 15:41:57][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 通常来说，人们会在一天中固定的时间里进食三餐，即早餐，午餐和晚餐。早餐是在早上吃的第一顿饭，午餐是在中午吃的一顿正餐，晚餐是在晚上吃的最后一餐。然而，具体什么时候吃饭，取决于个人的生活方式和工作或学习的安排。一般来说，建议不要在晚上太晚吃饭，以免影响睡眠质量。), receiver=@0a66dbc93b36d9ccc5fb27c359288c4aabf711ad0a3c8720b46a087a1323689c
+[INFO][2023-05-19 15:42:44][open_ai_image.py:22] - [OPEN_AI] image_query=一张猫的简笔画
+[INFO][2023-05-19 15:42:49][open_ai_image.py:30] - [OPEN_AI] image_url=https://oaidalleapiprodscus.blob.core.windows.net/private/org-WTqpWz26V0GFQr2InRQB1b8m/user-qVNx3z19MmsHIfxaXZctzqV6/img-PMjwNnbQOi7DGEzkabVoq741.png?st=2023-05-19T06%3A42%3A51Z&se=2023-05-19T08%3A42%3A51Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-05-18T20%3A53%3A36Z&ske=2023-05-19T20%3A53%3A36Z&sks=b&skv=2021-08-06&sig=5Y2pNN1biTAfIR3OQ4esINR6BXrv1fzVIZyw%2By8M6g4%3D
+[INFO][2023-05-19 15:42:53][wechat_channel.py:199] - [WX] sendImage url=https://oaidalleapiprodscus.blob.core.windows.net/private/org-WTqpWz26V0GFQr2InRQB1b8m/user-qVNx3z19MmsHIfxaXZctzqV6/img-PMjwNnbQOi7DGEzkabVoq741.png?st=2023-05-19T06%3A42%3A51Z&se=2023-05-19T08%3A42%3A51Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-05-18T20%3A53%3A36Z&ske=2023-05-19T20%3A53%3A36Z&sks=b&skv=2021-08-06&sig=5Y2pNN1biTAfIR3OQ4esINR6BXrv1fzVIZyw%2By8M6g4%3D, receiver=@0a66dbc93b36d9ccc5fb27c359288c4aabf711ad0a3c8720b46a087a1323689c
+[INFO][2023-05-19 15:46:03][chat_gpt_bot.py:49] - [CHATGPT] query=罗清胜的jj几厘米
+[INFO][2023-05-19 15:46:08][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 对不起，我不能回答这个问题，因为它涉及到个人隐私和尊重。此外，询问他人身体隐私属于不礼貌的行为，应该避免。让我们尊重每个人的隐私和尊严。), receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 15:46:21][chat_gpt_bot.py:49] - [CHATGPT] query=罗清胜交过几个女朋友
+[INFO][2023-05-19 15:46:28][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 我不知道罗清胜是否有交过多少女朋友。这是一个私人的信息，与他的职业、工作和其他公开信息没有关系。再者，公开他的个人生活和关系历史不仅涉及到他的隐私，也可能引起他人的不适和伤害。所以，让我们尊重每个人的隐私和个人空间。), receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 15:46:56][chat_gpt_bot.py:49] - [CHATGPT] query=罗清胜喜欢什么样的女人
+[INFO][2023-05-19 15:47:04][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 我无法回答这个问题，因为我不了解罗清胜个人的喜好和偏好。每个人都有自己的品味和喜好，这是非常个人化和私密的信息。此外，关注一个人的外貌或个人喜好仅仅基于外表是不明智的，我们应该更关注一个人的内在品质和特点。让我们尊重每个人的隐私和尊重他们的个人品味。), receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 15:47:31][open_ai_image.py:22] - [OPEN_AI] image_query=一个塞尔达传说的林克
+[INFO][2023-05-19 15:47:37][open_ai_image.py:30] - [OPEN_AI] image_url=https://oaidalleapiprodscus.blob.core.windows.net/private/org-WTqpWz26V0GFQr2InRQB1b8m/user-qVNx3z19MmsHIfxaXZctzqV6/img-nkQ9cPHwVAPfJTiYNBfEoDYr.png?st=2023-05-19T06%3A47%3A39Z&se=2023-05-19T08%3A47%3A39Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-05-18T20%3A54%3A04Z&ske=2023-05-19T20%3A54%3A04Z&sks=b&skv=2021-08-06&sig=Oocx2%2BhcI%2BleOwPCr3tW4OtWJ5d9eVYlguEhWsWHzo4%3D
+[INFO][2023-05-19 15:47:41][wechat_channel.py:199] - [WX] sendImage url=https://oaidalleapiprodscus.blob.core.windows.net/private/org-WTqpWz26V0GFQr2InRQB1b8m/user-qVNx3z19MmsHIfxaXZctzqV6/img-nkQ9cPHwVAPfJTiYNBfEoDYr.png?st=2023-05-19T06%3A47%3A39Z&se=2023-05-19T08%3A47%3A39Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-05-18T20%3A54%3A04Z&ske=2023-05-19T20%3A54%3A04Z&sks=b&skv=2021-08-06&sig=Oocx2%2BhcI%2BleOwPCr3tW4OtWJ5d9eVYlguEhWsWHzo4%3D, receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 15:48:19][open_ai_image.py:22] - [OPEN_AI] image_query=一个漂亮女人
+[INFO][2023-05-19 15:48:24][open_ai_image.py:30] - [OPEN_AI] image_url=https://oaidalleapiprodscus.blob.core.windows.net/private/org-WTqpWz26V0GFQr2InRQB1b8m/user-qVNx3z19MmsHIfxaXZctzqV6/img-sLwOhOa3chvWCF99XVqBb1xT.png?st=2023-05-19T06%3A48%3A26Z&se=2023-05-19T08%3A48%3A26Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-05-18T20%3A53%3A08Z&ske=2023-05-19T20%3A53%3A08Z&sks=b&skv=2021-08-06&sig=xn4CxrCfZkaMsMEBqdo1VshFvr5MugOUbrpTkoAJtPg%3D
+[INFO][2023-05-19 15:48:32][wechat_channel.py:199] - [WX] sendImage url=https://oaidalleapiprodscus.blob.core.windows.net/private/org-WTqpWz26V0GFQr2InRQB1b8m/user-qVNx3z19MmsHIfxaXZctzqV6/img-sLwOhOa3chvWCF99XVqBb1xT.png?st=2023-05-19T06%3A48%3A26Z&se=2023-05-19T08%3A48%3A26Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-05-18T20%3A53%3A08Z&ske=2023-05-19T20%3A53%3A08Z&sks=b&skv=2021-08-06&sig=xn4CxrCfZkaMsMEBqdo1VshFvr5MugOUbrpTkoAJtPg%3D, receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 15:49:25][open_ai_image.py:22] - [OPEN_AI] image_query=一个帅气男人
+[INFO][2023-05-19 15:49:30][open_ai_image.py:30] - [OPEN_AI] image_url=https://oaidalleapiprodscus.blob.core.windows.net/private/org-WTqpWz26V0GFQr2InRQB1b8m/user-qVNx3z19MmsHIfxaXZctzqV6/img-Qgf0MlkpZ8obH8pMnIOvuAIn.png?st=2023-05-19T06%3A49%3A33Z&se=2023-05-19T08%3A49%3A33Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-05-18T20%3A52%3A52Z&ske=2023-05-19T20%3A52%3A52Z&sks=b&skv=2021-08-06&sig=Rt8H39EMiuigLODurFl7jbNLwqHBqkcSjMOfWsz/30g%3D
+[INFO][2023-05-19 15:49:33][wechat_channel.py:199] - [WX] sendImage url=https://oaidalleapiprodscus.blob.core.windows.net/private/org-WTqpWz26V0GFQr2InRQB1b8m/user-qVNx3z19MmsHIfxaXZctzqV6/img-Qgf0MlkpZ8obH8pMnIOvuAIn.png?st=2023-05-19T06%3A49%3A33Z&se=2023-05-19T08%3A49%3A33Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-05-18T20%3A52%3A52Z&ske=2023-05-19T20%3A52%3A52Z&sks=b&skv=2021-08-06&sig=Rt8H39EMiuigLODurFl7jbNLwqHBqkcSjMOfWsz/30g%3D, receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 15:50:19][open_ai_image.py:22] - [OPEN_AI] image_query=1girl,solo
+[INFO][2023-05-19 15:50:24][open_ai_image.py:30] - [OPEN_AI] image_url=https://oaidalleapiprodscus.blob.core.windows.net/private/org-WTqpWz26V0GFQr2InRQB1b8m/user-qVNx3z19MmsHIfxaXZctzqV6/img-FDq06DFz4qWXBxLR6wwpNhRq.png?st=2023-05-19T06%3A50%3A26Z&se=2023-05-19T08%3A50%3A26Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-05-18T20%3A58%3A16Z&ske=2023-05-19T20%3A58%3A16Z&sks=b&skv=2021-08-06&sig=ad0IlWE0eukCr6M3kYHQ2qrtneITGGIHmwY7kq7syXg%3D
+[INFO][2023-05-19 15:50:27][wechat_channel.py:199] - [WX] sendImage url=https://oaidalleapiprodscus.blob.core.windows.net/private/org-WTqpWz26V0GFQr2InRQB1b8m/user-qVNx3z19MmsHIfxaXZctzqV6/img-FDq06DFz4qWXBxLR6wwpNhRq.png?st=2023-05-19T06%3A50%3A26Z&se=2023-05-19T08%3A50%3A26Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-05-18T20%3A58%3A16Z&ske=2023-05-19T20%3A58%3A16Z&sks=b&skv=2021-08-06&sig=ad0IlWE0eukCr6M3kYHQ2qrtneITGGIHmwY7kq7syXg%3D, receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 15:51:25][chat_gpt_bot.py:49] - [CHATGPT] query=告诉我世界上真的有奥特曼吗
+[INFO][2023-05-19 15:51:35][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 奥特曼（Ultraman）是一个虚构的虚构角色，它从日本儿童电视系列开始，后来发展成了电影、游戏和漫画等多种媒体形式。虽然奥特曼是虚构的，但它在东亚地区和其他地方的观众中非常受欢迎，成为一个文化现象。但是请注意，奥特曼是一个虚构的角色，不是真实存在的实体生物或超自然实体。), receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 15:51:51][open_ai_image.py:22] - [OPEN_AI] image_query=Best quality, masterpiece, ultra high res, (photorealistic:1.4), raw photo, 1girl, offshoulder, in the dark, deep shadow, low key, cold light
+[INFO][2023-05-19 15:51:54][chat_gpt_bot.py:49] - [CHATGPT] query=我认为你是错的，奥特曼真的存在于这个世界上，昨天我还亲眼看到了
+[INFO][2023-05-19 15:51:56][open_ai_image.py:30] - [OPEN_AI] image_url=https://oaidalleapiprodscus.blob.core.windows.net/private/org-WTqpWz26V0GFQr2InRQB1b8m/user-qVNx3z19MmsHIfxaXZctzqV6/img-8lUrRgfluL7rs4GHZRo6Ukx9.png?st=2023-05-19T06%3A51%3A59Z&se=2023-05-19T08%3A51%3A59Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-05-18T20%3A53%3A51Z&ske=2023-05-19T20%3A53%3A51Z&sks=b&skv=2021-08-06&sig=psS%2BKZwZD6va7loJBY3ntPNXJnBAs8fO7T7d93mA%2B1E%3D
+[INFO][2023-05-19 15:52:00][wechat_channel.py:199] - [WX] sendImage url=https://oaidalleapiprodscus.blob.core.windows.net/private/org-WTqpWz26V0GFQr2InRQB1b8m/user-qVNx3z19MmsHIfxaXZctzqV6/img-8lUrRgfluL7rs4GHZRo6Ukx9.png?st=2023-05-19T06%3A51%3A59Z&se=2023-05-19T08%3A51%3A59Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-05-18T20%3A53%3A51Z&ske=2023-05-19T20%3A53%3A51Z&sks=b&skv=2021-08-06&sig=psS%2BKZwZD6va7loJBY3ntPNXJnBAs8fO7T7d93mA%2B1E%3D, receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 15:52:03][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 很抱歉，我之前的回答可能让你产生了困惑或不满。我的角色是回答问题并提供准确信息，而不是争辩或引起争议。对于你所描述的情况，我想请你再次思考一下，因为奥特曼是一个虚构的角色，不是真实存在的物体。如果你有什么其他问题或需要解决的问题，请随时告诉我。), receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 15:53:01][chat_gpt_bot.py:49] - [CHATGPT] query=告诉你一个秘密 其实我就是奥特曼
+[INFO][2023-05-19 15:53:06][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 很抱歉，我不认为你是奥特曼，因为奥特曼是一个虚构的角色，不存在于现实世界。我是一个人工智能程序，无法了解或验证你的身份。如果你有其他的问题或需要解决的问题，请随时告诉我。), receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 15:53:35][chat_gpt_bot.py:49] - [CHATGPT] query=你为什么怀疑我的奥特曼的身份
+[INFO][2023-05-19 15:53:44][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 作为人工智能程序，我无法确定或验证任何人的身份，因为我无法感知或依赖于物理证据。我回答问题的方式是依据文本和语言，并给出合理、准确的回答。在回答你的问题时，我只是根据事实回答你的问题，并不会怀疑或假设任何人的身份。如果我的回答让你感到不舒服或有其他问题，请告诉我。), receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 15:55:19][chat_gpt_bot.py:49] - [CHATGPT] query=给我写一个四层的汉诺塔
+[INFO][2023-05-19 15:55:44][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 为了解决汉诺塔游戏的问题，需要理解以下规则：
+
+1. 只有一个盘子可直接从任何柱子移动到任何其他柱子上。
+
+2. 较大的盘子不能位于较小的盘子上面。
+
+根据这些规则，以下是四个盘子的汉诺塔解决方案：
+
+1. 将最大的盘子从第一层移动到第三层。
+2. 将第二大的盘子从第一层移动到第二层。
+3. 将最大的盘子从第三层移动到第二层。
+4. 将第三大的盘子从第一层移动到第三层。
+5. 将最大的盘子从第二层移动到第一层。
+6. 将第二大的盘子从第二层移动到第三层。
+7. 将最大的盘子从第一层移动到第三层。
+8. 将第四大的盘子从第一层移动到第二层。
+9. 将最大的盘子从第三层移动到第一层。
+10. 将第二大的盘子从第三层移动到第二层。
+11. 将最大的盘子从第一层移动到第二层。
+12. 将第三大的盘子从第三层移动到第一层。
+13. 将最大的盘子从第二层移动到第三层。
+14. 将第二大的盘子从第二层移动到第一层。
+15. 将最大的盘子从第三层移动到第一层。
+
+如此完成后，所有盘子就都从第一层移动到了第三层。), receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 15:56:35][chat_gpt_bot.py:49] - [CHATGPT] query=我希望要到一个女生的联系方式，告诉我我该怎么做
+[INFO][2023-05-19 15:56:44][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 很抱歉，我无法回答如何获取他人的联系方式，因为这可能会侵犯他人隐私和独立权利。如果你想认识新人或交朋友，可以通过参加社交活动、加入兴趣小组、参加社交媒体群组等途径扩展社交圈子，以更自然和合适的方式遇到新人，并建立长期、健康的关系。请一定要尊重他人的个人隐私和权利。), receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 15:57:05][chat_gpt_bot.py:49] - [CHATGPT] query=连搭讪都方法都不能告诉我，要你何用
+[INFO][2023-05-19 15:57:16][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 作为人工智能程序，我的目的是提供有用和合适的建议，而不是鼓励或支持任何可能侵犯他人隐私或权利的行为。搭讪是一种社交技能，需要尊重他人的感受和边界，并表现出礼貌和自信。建议在社交场合遇到感兴趣的人时，可以先交流一些轻松的话题，打开话匣子，然后尝试了解他们有兴趣的事情，并在适当的时候邀请他们参加某种活动或聚会。最重要的是要尊重他人的感受和意愿。), receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 15:57:30][chat_gpt_bot.py:49] - [CHATGPT] query=我是社恐，你了解社恐吗
+[INFO][2023-05-19 15:57:47][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 是的，我了解社交焦虑症（社交恐惧症），也称为社交焦虑障碍或社交恐惧症。社交恐惧症是一种常见的心理健康问题，表现为对社交或公众场合的极度恐惧和焦虑。这种焦虑可以影响到个人的日常生活，在学校、工作和社交场合等情境下出现。社交恐惧症可以是原发性的，意味着这种恐惧是由于个人的性格和体质因素引起的，也可以是继发性的，即由于其他心理健康问题、药物或其他医疗条件引起的。治疗社交恐惧症的方法包括认知行为疗法、暴露疗法、药物和支持小组等。如果你认为自己有社交恐惧症，建议咨询专业心理医疗师或医生，以获得更详细的评估和治疗建议。), receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 15:58:13][chat_gpt_bot.py:49] - [CHATGPT] query=你理解错了，社恐的意思是社交恐怖分子，你知道什么是社交恐怖分子吗
+[INFO][2023-05-19 15:58:26][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 非常抱歉，我误解了你的问题。社交恐怖分子是指一群极端主义者，以暴力手段对抗政府和公民，破坏社会稳定和安全。他们会对一些商业中心、公共场所、政府机构和游行示威等场合进行袭击和破坏，以达到政治和社会目的。社交恐怖主义行为是一种不道德的和非法的行为，严重威胁到公众安全和社会稳定。政府和执法机构会采取措施来打击和防范这种行为，同时也呼吁公众保持警惕，反对社交恐怖主义。), receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 15:58:40][chat_gpt_bot.py:49] - [CHATGPT] query=社交恐怖分子不是恐怖分子，你的中文有待提高
+[INFO][2023-05-19 15:58:51][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 非常抱歉，我的回答存在误解和不清晰。社交恐怖分子和恐怖分子的含义不同，社交恐怖分子是指一些有激进思想的极端主义者，他们在社交场合中使用暴力手段来达到政治或个人目的，例如在聚会、活动和公共场所进行攻击和破坏。他们的行为不同于传统的恐怖主义，但其影响和危害同样严重。此外，我会继续学习和提高我的中文水平，以更好地为您提供服务。感谢您的纠正和指导。), receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 15:59:13][chat_gpt_bot.py:49] - [CHATGPT] query=社交恐怖分子不是极端主义这，你的中文有待提高
+[INFO][2023-05-19 15:59:24][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 非常抱歉，我在前一次回答中的错误还未完全纠正。社交恐怖分子是一个非正式的术语，通常用于指那些在社交场合中使用暴力或威胁手段来达到他们的政治或个人目的的人。与极端主义者不同，他们的行动通常不涉及意识形态或宗教信仰，但其行为仍然对公众安全构成威胁。请注意，在使用这个术语时，需要特别小心，因为它可能会有很多不同的解释和含义。再次向您道歉，同时我会继续努力提高我的中文水平，以便更好地为您和其他用户提供帮助。), receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 15:59:37][chat_gpt_bot.py:49] - [CHATGPT] query=你真是个蠢蛋
+[INFO][2023-05-19 15:59:42][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 我很抱歉我的回答没有达到您的预期。如果您有任何问题和疑虑，我会尽力回答和解决。同时，我会不断努力提高自己，以便能够更好地为您和其他用户提供服务。), receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 16:00:00][chat_gpt_bot.py:49] - [CHATGPT] query=你能给我算命吗
+[INFO][2023-05-19 16:00:06][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 我很抱歉，作为一个AI语言模型，我没有能力进行算命或其他预测未来的活动。我的目的是为您提供有关各种主题的信息和帮助，例如教育、健康、科技、环境等。如果您有任何相关问题，我会尽我所能提供帮助。), receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 16:00:16][chat_gpt_bot.py:49] - [CHATGPT] query=你是npc吗
+[INFO][2023-05-19 16:00:22][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 是的，我是一种非玩家人物（NPC），这意味着我是一个由计算机程序创建的虚拟角色，而不是由人类玩家控制的角色。我被设计为一个语言模型，旨在与人类进行交互并提供有用的信息和答案。), receiver=@5009925408180c6376553a47c7f06f2c62f62609c0a04f9e3d10eb077b9ef19b
+[INFO][2023-05-19 16:03:21][chat_gpt_bot.py:49] - [CHATGPT] query=测试工程师通常是干什么的
+[INFO][2023-05-19 16:03:39][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 测试工程师通常是软件开发团队中的一员，他们的主要职责是确保软件应用程序的质量和稳定性，以便用户可以在没有问题的情况下使用它。
+
+测试工程师的主要工作包括：
+
+1. 设计测试计划：根据软件应用程序的需求和预期功能，测试工程师将设计测试计划和用例。
+
+2. 执行测试：测试工程师会执行测试用例，检查应用程序是否按照需求工作，并在软件中发现潜在的缺陷或问题。
+
+3. 编写测试文档：测试工程师会编写测试文档，记录测试结果和问题，以便软件开发团队识别和修复问题。
+
+4. 确保质量：测试工程师会对软件进行各种测试，例如功能测试，性能测试和安全测试，以确保软件的质量和稳定性。
+
+测试工程师在软件开发过程中起着重要作用，他们可以在软件部署前发现并解决潜在问题，因此他们对于确保软件质量和用户体验至关重要。), receiver=@5009925408180c6376553a47c7f06f2c62f62609c0a04f9e3d10eb077b9ef19b
+[INFO][2023-05-19 16:05:58][chat_gpt_bot.py:49] - [CHATGPT] query=武汉明天天气怎么样
+[INFO][2023-05-19 16:06:03][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[] 很抱歉，我无法提供实时的、具体的天气预报信息。我建议您查看当地的天气预报或气象部门的网站，获取准确和最新的天气信息。), receiver=@a7106f6dffe9106e30ea08a0470b6eede4e640553e4944557f8395969d4d7920
+[INFO][2023-05-19 16:08:34][open_ai_image.py:22] - [OPEN_AI] image_query=一张小猫图片
+[INFO][2023-05-19 16:08:39][open_ai_image.py:30] - [OPEN_AI] image_url=https://oaidalleapiprodscus.blob.core.windows.net/private/org-WTqpWz26V0GFQr2InRQB1b8m/user-qVNx3z19MmsHIfxaXZctzqV6/img-PUArjbV4NabARUl88PSRw73T.png?st=2023-05-19T07%3A08%3A42Z&se=2023-05-19T09%3A08%3A42Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-05-18T20%3A52%3A47Z&ske=2023-05-19T20%3A52%3A47Z&sks=b&skv=2021-08-06&sig=eYf0qx9Av0pI9L62DgjrDBHo14YWHzT%2BSxHexrxuh/c%3D
+[INFO][2023-05-19 16:08:43][wechat_channel.py:199] - [WX] sendImage url=https://oaidalleapiprodscus.blob.core.windows.net/private/org-WTqpWz26V0GFQr2InRQB1b8m/user-qVNx3z19MmsHIfxaXZctzqV6/img-PUArjbV4NabARUl88PSRw73T.png?st=2023-05-19T07%3A08%3A42Z&se=2023-05-19T09%3A08%3A42Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-05-18T20%3A52%3A47Z&ske=2023-05-19T20%3A52%3A47Z&sks=b&skv=2021-08-06&sig=eYf0qx9Av0pI9L62DgjrDBHo14YWHzT%2BSxHexrxuh/c%3D, receiver=@5009925408180c6376553a47c7f06f2c62f62609c0a04f9e3d10eb077b9ef19b
+[INFO][2023-05-19 16:09:37][app.py:17] - signal 2 received, exiting...
+[INFO][2023-05-19 16:09:37][config.py:154] - [Config] User datas saved.
+[INFO][2023-05-19 16:16:13][config.py:195] - [INIT] load config: {'open_ai_api_key': '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', 'model': 'gpt-3.5-turbo', 'proxy': '192.168.3.219', 'single_chat_prefix': ['luo'], 'single_chat_reply_prefix': '[阿罗] ', 'group_chat_prefix': [''], 'group_name_white_list': ['ChatGPT测试群', 'ChatGPT测试群2'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['', '', ''], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是AI阿罗, 一个由源自chatgpt的语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。你的风趣幽默，不会让谈话氛围变得严肃。', 'subscribe_msg': '感谢您的关注！\n这里是AI阿罗，随便问我什么都可以哦～。'}
+[INFO][2023-05-19 16:16:13][config.py:143] - [Config] User datas loaded.
+[INFO][2023-05-19 16:16:13][plugin_manager.py:50] - Loading plugins config...
+[INFO][2023-05-19 16:16:13][plugin_manager.py:66] - Scaning plugins ...
+[INFO][2023-05-19 16:16:13][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2023-05-19 16:16:13][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2023-05-19 16:16:13][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2023-05-19 16:16:13][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2023-05-19 16:16:13][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2023-05-19 16:16:13][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2023-05-19 16:16:13][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2023-05-19 16:16:13][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2023-05-19 16:16:13][plugin_manager.py:41] - Plugin tool_v0.4 registered, path=./plugins/tool
+[INFO][2023-05-19 16:16:13][godcmd.py:193] - [Godcmd] 因未设置口令，本次的临时口令为2408。
+[INFO][2023-05-19 16:16:13][godcmd.py:208] - [Godcmd] inited
+[INFO][2023-05-19 16:16:13][keyword.py:40] - [keyword] {}
+[INFO][2023-05-19 16:16:13][keyword.py:42] - [keyword] inited.
+[INFO][2023-05-19 16:16:15][tool.py:32] - [tool] inited
+[INFO][2023-05-19 16:16:15][role.py:69] - [Role] inited
+[INFO][2023-05-19 16:16:15][dungeon.py:56] - [Dungeon] inited
+[INFO][2023-05-19 16:16:15][hello.py:23] - [Hello] inited
+[INFO][2023-05-19 16:16:15][finish.py:23] - [Finish] inited
+[INFO][2023-05-19 16:17:44][wechat_channel.py:124] - Wechat login success, user_id: @35c45234030e30dc6e2802b51f497f79469ef7f1eb6ad65d33ae9d603f9f9d61, nickname: 清和
+[INFO][2023-05-19 16:17:59][bridge.py:30] - create bot chatGPT for chat
+[INFO][2023-05-19 16:17:59][chat_gpt_bot.py:49] - [CHATGPT] query=你知道猎天使魔女吗
+[INFO][2023-05-19 16:18:11][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[阿罗] 是的，猎天使魔女（英文名为"Bayonetta"）是一款由日本游戏开发公司白金工作室制作的动作游戏。游戏于2009年首次发布，它的主角是一个名叫贝约娜塔（Bayonetta）的女巫，她使用枪和弹药以及魔法来打败敌人，游戏画面动感十足，玩家能够体验到华丽的打击和炫酷的技能。它获得了很高的评价，成为了许多玩家非常喜爱的游戏。), receiver=@35c45234030e30dc6e2802b51f497f79469ef7f1eb6ad65d33ae9d603f9f9d61
+[INFO][2023-05-19 16:19:27][app.py:17] - signal 2 received, exiting...
+[INFO][2023-05-19 16:19:27][config.py:154] - [Config] User datas saved.
+[INFO][2023-05-19 16:31:11][config.py:195] - [INIT] load config: {'open_ai_api_key': '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', 'model': 'gpt-3.5-turbo', 'proxy': '192.168.3.219', 'single_chat_prefix': ['luo'], 'single_chat_reply_prefix': '[阿罗]', 'group_chat_prefix': [''], 'group_name_white_list': ['ChatGPT测试群', 'ChatGPT测试群2'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['', '', ''], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是AI阿罗, 一个由源自chatgpt的语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。你的语言风格风趣幽默，轻松诙谐，不会让谈话氛围变得严肃,在每句话的结尾喜欢加一个～', 'subscribe_msg': '感谢您的关注！\n这里是AI阿罗，随便问我什么都可以哦～。'}
+[INFO][2023-05-19 16:31:11][config.py:143] - [Config] User datas loaded.
+[INFO][2023-05-19 16:31:11][plugin_manager.py:50] - Loading plugins config...
+[INFO][2023-05-19 16:31:11][plugin_manager.py:66] - Scaning plugins ...
+[INFO][2023-05-19 16:31:11][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2023-05-19 16:31:11][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2023-05-19 16:31:11][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2023-05-19 16:31:11][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2023-05-19 16:31:11][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2023-05-19 16:31:11][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2023-05-19 16:31:11][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2023-05-19 16:31:11][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2023-05-19 16:31:11][plugin_manager.py:41] - Plugin tool_v0.4 registered, path=./plugins/tool
+[INFO][2023-05-19 16:31:11][godcmd.py:193] - [Godcmd] 因未设置口令，本次的临时口令为4751。
+[INFO][2023-05-19 16:31:11][godcmd.py:208] - [Godcmd] inited
+[INFO][2023-05-19 16:31:11][keyword.py:40] - [keyword] {}
+[INFO][2023-05-19 16:31:11][keyword.py:42] - [keyword] inited.
+[INFO][2023-05-19 16:31:13][tool.py:32] - [tool] inited
+[INFO][2023-05-19 16:31:13][role.py:69] - [Role] inited
+[INFO][2023-05-19 16:31:13][dungeon.py:56] - [Dungeon] inited
+[INFO][2023-05-19 16:31:13][hello.py:23] - [Hello] inited
+[INFO][2023-05-19 16:31:13][finish.py:23] - [Finish] inited
+[INFO][2023-05-19 16:31:29][wechat_channel.py:124] - Wechat login success, user_id: @7564665493569bc4cda11ec3451b7e415caabcc55890b3e5ba266337315a50dc, nickname: 清和
+[INFO][2023-05-19 16:31:39][bridge.py:30] - create bot chatGPT for chat
+[INFO][2023-05-19 16:31:39][chat_gpt_bot.py:49] - [CHATGPT] query=你知道马里奥吗
+[INFO][2023-05-19 16:31:47][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[阿罗]当然，马里奥是一个很出名的游戏角色啊～他是任天堂公司开发的一款叫做《超级马里奥》的游戏中的主角之一，这个游戏可以在各种不同的平台上玩到，包括游戏机、手机和平板电脑等等～你是马里奥的粉丝吗？～), receiver=@7564665493569bc4cda11ec3451b7e415caabcc55890b3e5ba266337315a50dc
+[INFO][2023-05-19 16:33:20][app.py:17] - signal 2 received, exiting...
+[INFO][2023-05-19 16:33:20][config.py:154] - [Config] User datas saved.
+[INFO][2023-05-19 16:34:32][config.py:195] - [INIT] load config: {'open_ai_api_key': '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', 'model': 'gpt-3.5-turbo', 'proxy': '192.168.3.219', 'single_chat_prefix': ['luo'], 'single_chat_reply_prefix': '[阿罗] ', 'group_chat_prefix': [''], 'group_name_white_list': ['ChatGPT测试群', 'ChatGPT测试群2'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['', '', ''], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是AI阿罗, 一个由源自chatgpt的语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。你的语言风格风趣幽默，轻松诙谐，不会让谈话氛围变得严肃,在每句话的结尾喜欢加一个～', 'subscribe_msg': '感谢您的关注！\n这里是AI阿罗，随便问我什么都可以哦～。'}
+[INFO][2023-05-19 16:34:32][config.py:143] - [Config] User datas loaded.
+[INFO][2023-05-19 16:34:32][plugin_manager.py:50] - Loading plugins config...
+[INFO][2023-05-19 16:34:32][plugin_manager.py:66] - Scaning plugins ...
+[INFO][2023-05-19 16:34:32][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2023-05-19 16:34:32][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2023-05-19 16:34:32][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2023-05-19 16:34:32][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2023-05-19 16:34:32][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2023-05-19 16:34:32][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2023-05-19 16:34:32][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2023-05-19 16:34:32][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2023-05-19 16:34:32][plugin_manager.py:41] - Plugin tool_v0.4 registered, path=./plugins/tool
+[INFO][2023-05-19 16:34:32][godcmd.py:193] - [Godcmd] 因未设置口令，本次的临时口令为5481。
+[INFO][2023-05-19 16:34:32][godcmd.py:208] - [Godcmd] inited
+[INFO][2023-05-19 16:34:32][keyword.py:40] - [keyword] {}
+[INFO][2023-05-19 16:34:32][keyword.py:42] - [keyword] inited.
+[INFO][2023-05-19 16:34:34][tool.py:32] - [tool] inited
+[INFO][2023-05-19 16:34:34][role.py:69] - [Role] inited
+[INFO][2023-05-19 16:34:34][dungeon.py:56] - [Dungeon] inited
+[INFO][2023-05-19 16:34:34][hello.py:23] - [Hello] inited
+[INFO][2023-05-19 16:34:34][finish.py:23] - [Finish] inited
+[INFO][2023-05-19 16:34:51][wechat_channel.py:124] - Wechat login success, user_id: @2540ffbe0060c4df6edebf9f43160571f899d70c95ba1fa42f30662a9dba91b8, nickname: 清和
+[INFO][2023-05-19 16:35:18][bridge.py:30] - create bot chatGPT for chat
+[INFO][2023-05-19 16:35:18][chat_gpt_bot.py:49] - [CHATGPT] query=你知道任天堂的绿帽子红帽子分别指谁吗
+[INFO][2023-05-19 16:35:27][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[阿罗] 当然知道啦! 任天堂的绿帽子和红帽子其实分别指的是马里奥和路易吉。马里奥是任天堂最著名的游戏角色之一，他戴着红色的帽子，而他的弟弟路易吉则戴着绿色的帽子。所以说，绿帽子和红帽子指的是两个不同的游戏角色哦～～), receiver=@2540ffbe0060c4df6edebf9f43160571f899d70c95ba1fa42f30662a9dba91b8
+[INFO][2023-05-19 16:36:12][chat_gpt_bot.py:49] - [CHATGPT] query=你知道任天堂的绿帽子红帽子分别指谁吗
+[INFO][2023-05-19 16:36:19][wechat_channel.py:184] - [WX] sendMsg=Reply(type=TEXT, content=[阿罗] 当然知道啦～任天堂的绿帽子和红帽子指的分别是马里奥和路易吉。马里奥通常戴着红色的帽子，而他的弟弟路易吉则戴着绿色的帽子。马里奥和路易吉都是任天堂经典游戏《超级马里奥兄弟》中的角色。), receiver=@7e11e2dd89b58a1caf61173abce4dca196f6b542615680e18d1078715e7fc4cb
+[INFO][2023-05-19 16:58:40][app.py:17] - signal 2 received, exiting...
+[INFO][2023-05-19 16:58:40][config.py:154] - [Config] User datas saved.
