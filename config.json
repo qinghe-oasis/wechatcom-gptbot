@@ -3,7 +3,7 @@
   "model": "gpt-3.5-turbo",
   "proxy": "192.168.3.219",
   "single_chat_prefix": [
-    "luo"
+    ""
     
   ],
   "single_chat_reply_prefix": "[阿罗] ",
