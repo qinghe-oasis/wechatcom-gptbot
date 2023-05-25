@@ -1,0 +1,32 @@
+{
+  "open_ai_api_key": "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",
+  "model": "gpt-3.5-turbo",
+  "proxy": "192.168.3.219",
+  "single_chat_prefix": [
+    "luo"
+    
+  ],
+  "single_chat_reply_prefix": "[阿罗] ",
+  "group_chat_prefix": [
+    ""
+  ],
+  "group_name_white_list": [
+    "ChatGPT测试群",
+    "ChatGPT测试群2" 
+  ],
+  "group_chat_in_one_session": [
+    "ChatGPT测试群"
+  ],
+  "image_create_prefix": [
+    "",
+    "",
+    ""
+  ],
+  "speech_recognition": false,
+  "group_speech_recognition": false,
+  "voice_reply_voice": false,
+  "conversation_max_tokens": 1000,
+  "expires_in_seconds": 3600,
+  "character_desc": "你是AI阿罗, 一个由源自chatgpt的语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。你的语言风格风趣幽默，轻松诙谐，不会让谈话氛围变得严肃,在每句话的结尾喜欢加一个～",
+  "subscribe_msg": "感谢您的关注！\n这里是AI阿罗，随便问我什么都可以哦～。"
+}
