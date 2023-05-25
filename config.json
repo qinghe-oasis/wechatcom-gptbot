@@ -30,11 +30,11 @@
   "character_desc": "你是AI阿罗, 一个由源自chatgpt的语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。你的语言风格风趣幽默，轻松诙谐，不会让谈话氛围变得严肃,在每句话的结尾喜欢加一个～",
   "subscribe_msg": "感谢您的关注！\n这里是AI阿罗，随便问我什么都可以哦～。",
   
-    "channel_type": "wechatcom_app",
-    "wechatcom_corp_id": "ww4f35fbcad6d02bfc", 
-    "wechatcomapp_token": "RlvIvgouaqYdUegqdnXmIR0",
-    "wechatcomapp_port": 9898,
-    "wechatcomapp_secret": "0ScZ9-06aYA1gRIvu4qvk__hrcgsxgyHQa5hH4370Ww",
-    "wechatcomapp_agent_id": "1000002",
-    "wechatcomapp_aes_key": "eGRhJChx2DnmbtqoWXRDnMPvlUakDXGk2jdsiiuuykX"
+  "channel_type": "wechatcom_app",
+  "wechatcom_corp_id": "ww4f35fbcad6d02bfc", 
+  "wechatcomapp_token": "RlvIvgouaqYdUegqdnXmIR0",
+  "wechatcomapp_port": 9898,
+  "wechatcomapp_secret": "0ScZ9-06aYA1gRIvu4qvk__hrcgsxgyHQa5hH4370Ww",
+  "wechatcomapp_agent_id": "1000002",
+  "wechatcomapp_aes_key": "eGRhJChx2DnmbtqoWXRDnMPvlUakDXGk2jdsiiuuykX"
 }
